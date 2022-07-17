@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1e32ec6c7384b49aab885d8a99fb34, type: 3}
+  m_Name: b009
+  m_EditorClassIdentifier: 
+  cardID: 
+  cardSprite: {fileID: 21300000, guid: fcc16a5d6fec240489993adea707660d, type: 3}
+  cardType: 0
+  attack: 8
+  goAheadAmount: 0
+  backOffAmount: 0
+  minCastDistanceLimit: 3
+  maxCastDistanceLimit: 0
+  cardDescription: 
