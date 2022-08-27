@@ -3102,7 +3102,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 519420040}
         m_TargetAssemblyTypeName: DrawCard, Assembly-CSharp
-        m_MethodName: "\u62BD\u5361"
+        m_MethodName: drawcard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

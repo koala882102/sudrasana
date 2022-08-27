@@ -37,6 +37,7 @@ public class b008 : MonoBehaviour
                 GameMgr.ThisRoundDamage = GameMgr.ThisRoundDamage + 5;
             }
             Settlement.MyRound = false;
+            Destroy(gameObject);
         }
     }
 }

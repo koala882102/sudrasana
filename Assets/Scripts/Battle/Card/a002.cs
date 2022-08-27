@@ -36,6 +36,7 @@ public class a002 : MonoBehaviour
                 Settlement.b1.SetActive(true);
             }
             Settlement.MyRound = false;
+            Destroy(gameObject);
         }
     }
 }

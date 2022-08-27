@@ -30,6 +30,7 @@ public class a003 : MonoBehaviour
                 a003Buff = 1; //敵方下回合麻痺
             }
             Settlement.MyRound = false;
+            Destroy(gameObject);
         }
     }
 }

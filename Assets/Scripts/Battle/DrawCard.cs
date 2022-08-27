@@ -29,52 +29,63 @@ public class DrawCard : MonoBehaviour
         CardPool.Add(new NewCardData() {NewCardNum = "a006"});
         CardPool.Add(new NewCardData() {NewCardNum = "a007"});
         CardPool.Add(new NewCardData() {NewCardNum = "a008"});
+        
+        drawcard();
     }
 
-    public void 抽卡()
+    public void drawcard()
     {
-        
-        int cardnum = Random.Range(0, 800);
-        if (cardnum <= 99)
+        for (int i = cardTransform.transform.childCount; i <= 6; i++)
         {
-            print("a001");
-            GameObject go = Instantiate(a001ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if(cardnum >= 100 && cardnum <= 199)
-        {
-            print("a002");
-            GameObject go = Instantiate(a002ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if (cardnum >= 200 && cardnum <= 299)
-        {
-            print("a003");
-            GameObject go = Instantiate(a003ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if (cardnum >= 300 && cardnum <= 399)
-        {
-            print("a004");
-            GameObject go = Instantiate(a004ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if (cardnum >= 400 && cardnum <= 499)
-        {
-            print("a005");
-            GameObject go = Instantiate(a005ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if (cardnum >= 500 && cardnum <= 599)
-        {
-            print("a006");
-            GameObject go = Instantiate(a006ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if (cardnum >= 600 && cardnum <= 699)
-        {
-            print("a007");
-            GameObject go = Instantiate(a007ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
-        }else if (cardnum >= 700)
-        {
-            print("a008");
-            GameObject go = Instantiate(a008ob,cardTransform.transform);
-            go.transform.SetParent(cardTransform.transform);
+            int cardnum = Random.Range(0, 800);
+            if (cardnum <= 99)
+            {
+                print("a001");
+                GameObject go = Instantiate(a001ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 100 && cardnum <= 199)
+            {
+                print("a002");
+                GameObject go = Instantiate(a002ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 200 && cardnum <= 299)
+            {
+                print("a003");
+                GameObject go = Instantiate(a003ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 300 && cardnum <= 399)
+            {
+                print("a004");
+                GameObject go = Instantiate(a004ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 400 && cardnum <= 499)
+            {
+                print("a005");
+                GameObject go = Instantiate(a005ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 500 && cardnum <= 599)
+            {
+                print("a006");
+                GameObject go = Instantiate(a006ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 600 && cardnum <= 699)
+            {
+                print("a007");
+                GameObject go = Instantiate(a007ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
+            else if (cardnum >= 700)
+            {
+                print("a008");
+                GameObject go = Instantiate(a008ob, cardTransform.transform);
+                go.transform.SetParent(cardTransform.transform);
+            }
         }
     }
 

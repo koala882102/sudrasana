@@ -38,6 +38,7 @@ public class c005 : MonoBehaviour
                 Settlement.eb2.SetActive(true);
             }
             Settlement.MyRound = false;
+            Destroy(gameObject);
         }
     }
 }

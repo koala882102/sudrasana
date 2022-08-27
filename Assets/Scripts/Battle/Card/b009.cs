@@ -30,6 +30,7 @@ public class b009 : MonoBehaviour
                                        BuffText.B1TN); //卡牌攻擊力+我方亢奮+敵方脆弱-我方虛弱-敵方振奮
             }
             Settlement.MyRound = false;
+            Destroy(gameObject);
         }
     }
 }
