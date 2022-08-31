@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Settlement : MonoBehaviour
 {
+    
+    
     public static bool MyRound;
     public static bool EnemyRound;
 

@@ -7,12 +7,14 @@ public class a002 : MonoBehaviour
 {
 
     public static int a002Buff;
+    
+    public GameObject s1;
 
-    public Settlement Settlement;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        s1= GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class a002 : MonoBehaviour
                 BuffText.B1TR = BuffText.B1TR + 1; //振奮回合+1
                 BuffText.B1TN = BuffText.B1TN + 5; //振奮+5
                 a002Buff = 1; //下回合虛弱啟動
-                Settlement.b1.SetActive(true);
+                s1.GetComponent<Settlement>().b1.SetActive(true);
             }
             Settlement.MyRound = false;
             Destroy(gameObject);

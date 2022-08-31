@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class b008 : MonoBehaviour
 {
-    public Settlement Settlement;
+    
+    public GameObject s1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        s1= GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -31,7 +32,8 @@ public class b008 : MonoBehaviour
             }
             BuffText.EB6TR = BuffText.EB6TR + 3;
             BuffText.EB6TN = BuffText.EB6TN + 3;
-            Settlement.eb6.SetActive(true);
+            
+            s1.GetComponent<Settlement>().eb6.SetActive(true);
             if (GameMgr.HaveBuff >= 1 && GameMgr.EHaveBuff >= 1)
             {
                 GameMgr.ThisRoundDamage = GameMgr.ThisRoundDamage + 5;

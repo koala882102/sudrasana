@@ -7,11 +7,12 @@ public class b006 : MonoBehaviour
 {
     public static int b006Buff;
 
-    public Settlement Settlement;
+    
+    public GameObject s1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        s1= GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -31,7 +32,8 @@ public class b006 : MonoBehaviour
                 GameMgr.ThisRoundDamage = GameMgr.ThisRoundDamage + 3;
                 BuffText.B1TR = BuffText.B1TR + 1;
                 BuffText.B1TN = BuffText.B1TN + 3;
-                Settlement.b1.SetActive(true);
+                
+                s1.GetComponent<Settlement>().b1.SetActive(true);
                 if (GameMgr.HaveBuff >= 1 && GameMgr.EHaveBuff >= 1)
                 {
                     b006Buff = 1; //下回合雙方亢奮3啟動
