@@ -35,7 +35,7 @@ public class DrawCard : MonoBehaviour
 
     public void drawcard()
     {
-        for (int i = cardTransform.transform.childCount; i <= 6; i++)
+        for (int i = cardTransform.transform.childCount; i < 6; i++)
         {
             int cardnum = Random.Range(0, 800);
             if (cardnum <= 99)
