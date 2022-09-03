@@ -164,8 +164,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: -883681519817640303}
-          m_TargetAssemblyTypeName: BigCard, Assembly-CSharp
+        - m_Target: {fileID: -4295398760289974362}
+          m_TargetAssemblyTypeName: b009, Assembly-CSharp
           m_MethodName: OnMouseDown
           m_Mode: 1
           m_Arguments:
