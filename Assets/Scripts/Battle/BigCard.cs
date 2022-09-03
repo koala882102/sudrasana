@@ -36,7 +36,7 @@ public class BigCard : MonoBehaviour
             blackbackground.SetActive(true);
             transform.localScale = new Vector3(1.22f,1.22f,1.22f);
             Vector3 objectpos = transform.localPosition;
-            transform.localPosition = new Vector3(objectpos.x, -1.57f, objectpos.z);
+            transform.localPosition = new Vector3(objectpos.x, -1f, objectpos.z);
             //Debug.Log(objectpos);
             transform.GetComponent<SpriteRenderer>().sortingOrder = 5;//設定layer
             //Debug.Log("滑鼠移到卡牌上");
