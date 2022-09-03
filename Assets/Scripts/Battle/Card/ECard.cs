@@ -21,6 +21,8 @@ public class ECard : MonoBehaviour
     public static int a007eBuff;
 
     public static int specialcardBuff;
+    
+    private int cardnum = 0;
 
     public Settlement Settlement;
     // Start is called before the first frame update
@@ -119,8 +121,31 @@ public class ECard : MonoBehaviour
 
                 a005e = false;
             }
+            else
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    int cardnum = Random.Range(0, 400);
+                    if (cardnum <= 99)
+                    {
+                        a005e = true;
+                    }
+                    else if (cardnum >= 100 && cardnum <= 199)
+                    {
+                        a006e = true;
+                    }
+                    else if (cardnum >= 200 && cardnum <= 299)
+                    {
+                        a007e = true;
+                    }
+                    else if (cardnum >= 300)
+                    {
+                        a008e = true;
+                    }
+                }
+            }
 
-            
+
         }
     }
 }
