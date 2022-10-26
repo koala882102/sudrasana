@@ -33,7 +33,7 @@ public class ButtonCImg1 : MonoBehaviour
     {
         isOver = true;
         ischange = true;
-        audiomgr.change();
+        audiomgr.enter();
     }
 
     public void OnMouseExit()
@@ -58,6 +58,7 @@ public class ButtonCImg1 : MonoBehaviour
 
     public void OnMouseDown()
     {
+        audiomgr.pressbutton();
         if (Settlement.MyRound)
         {
             round = round + 1;

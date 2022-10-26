@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class teachPanel : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class teachPanel : MonoBehaviour
     public GameObject Next;
 
     public GameObject X;
+
+    public AudioMgr audiomgr;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +39,7 @@ public class teachPanel : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         page1.SetActive(true);
         page2.SetActive(false);
@@ -45,5 +48,7 @@ public class teachPanel : MonoBehaviour
         Previous.SetActive(true);
         Next.SetActive(true);
         X.SetActive(true);
+        
+        audiomgr.pressbutton();
     }
 }

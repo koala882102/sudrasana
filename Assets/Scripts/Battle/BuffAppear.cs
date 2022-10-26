@@ -8,9 +8,12 @@ public class BuffAppear : MonoBehaviour
     private bool isOver = false;
 
     public GameObject BTG;
+
+    public AudioMgr audiomgr;
     public void OnMouseEnter()
     {
         isOver = true;
+        audiomgr.enter();
     }
 
     public void OnMouseExit()

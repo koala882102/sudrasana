@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class teachPrevious : MonoBehaviour
 {
@@ -13,11 +14,7 @@ public class teachPrevious : MonoBehaviour
 
     public GameObject page4;
 
-    public GameObject Previous;
-
-    public GameObject Next;
-
-    public GameObject X;
+    public AudioMgr audiomgr;
 
     public static int pageNum;
     // Start is called before the first frame update
@@ -29,38 +26,40 @@ public class teachPrevious : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pageNum == 1)
-        {
-            page1.SetActive(true);
-            page2.SetActive(false);
-            page3.SetActive(false);
-            page4.SetActive(false);
-        }else if (pageNum == 2)
-        {
-            page1.SetActive(false);
-            page2.SetActive(true);
-            page3.SetActive(false);
-            page4.SetActive(false);
-        }else if (pageNum == 3)
-        {
-            page1.SetActive(false);
-            page2.SetActive(false);
-            page3.SetActive(true);
-            page4.SetActive(false);
-        }else if (pageNum == 4)
-        {
-            page1.SetActive(false);
-            page2.SetActive(false);
-            page3.SetActive(false);
-            page4.SetActive(true);
-        }
+        
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
+        audiomgr.pressbutton();
         if (pageNum > 1)
         {
             pageNum--;
+            if (pageNum == 1)
+            {
+                page1.SetActive(true);
+                page2.SetActive(false);
+                page3.SetActive(false);
+                page4.SetActive(false);
+            }else if (pageNum == 2)
+            {
+                page1.SetActive(false);
+                page2.SetActive(true);
+                page3.SetActive(false);
+                page4.SetActive(false);
+            }else if (pageNum == 3)
+            {
+                page1.SetActive(false);
+                page2.SetActive(false);
+                page3.SetActive(true);
+                page4.SetActive(false);
+            }else if (pageNum == 4)
+            {
+                page1.SetActive(false);
+                page2.SetActive(false);
+                page3.SetActive(false);
+                page4.SetActive(true);
+            }
         }
     }
 }

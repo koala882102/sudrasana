@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5097831582939204357}
   - component: {fileID: -5908481122598867938}
   - component: {fileID: 172388256049175705}
+  - component: {fileID: -7168852613804537005}
   m_Layer: 5
   m_Name: a001
   m_TagString: Untagged
@@ -106,6 +107,7 @@ MonoBehaviour:
   CanvasUI: {fileID: 0}
   cardTransform: {fileID: 0}
   backgroundBool: 0
+  audiomgr: {fileID: -7168852613804537005}
 --- !u!114 &-7183809151218155109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2005136b2e7eb394cb580889e541d2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAttackAn: {fileID: 3660554424497892533, guid: 51f8a936e2a0ed64caf37fa25275d45a, type: 3}
+  MyAttackAnOb: {fileID: 0}
+  IsDown: 0
 --- !u!212 &172388256049175705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -269,3 +272,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7168852613804537005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617750069941521394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb506db63afdcce469d8caff03f505d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pressClip: {fileID: 0}
+  checkCard: {fileID: 0}

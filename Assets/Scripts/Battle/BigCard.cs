@@ -14,16 +14,18 @@ public class BigCard : MonoBehaviour
     public GameObject CanvasUI;
     public GameObject cardTransform;
     public bool backgroundBool;
-    
-    
+
+    //public AudioMgr audiomgr;
     void Start()
     {
         CanvasUI= GameObject.Find("Canvas");
         cardTransform = GameObject.Find("cardTransform");
         blackbackground = GameObject.Find("backgroundAn");
+        
     }
     public void OnMouseEnter()
     {
+        //audiomgr.check();
         GameMgr.ID = id;
         isOver = true;
         blackbackground.SetActive(true);

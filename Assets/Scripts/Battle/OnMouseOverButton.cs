@@ -11,6 +11,7 @@ public class OnMouseOverButton : MonoBehaviour
     public GameObject opencard1;
     public GameObject SpecialSkill;
 
+    public AudioMgr audiomgr;
     public void OnMouseEnter()
     {
         isOver = true;
@@ -23,6 +24,7 @@ public class OnMouseOverButton : MonoBehaviour
 
     public void OnMouseDown()
     {
+        audiomgr.pressbutton();
         if (Settlement.MyRound &&　ButtonCImg1.round == 3)
         {
             SpecialSkill.SetActive(true);
