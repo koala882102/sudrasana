@@ -11,11 +11,24 @@ public class BigCard : MonoBehaviour
     public GameObject blackbackground;
     public GameObject c1, c2, c3, c4, c5, c6, c7, c8;
     public GameObject DCard;
+    public GameObject CanvasUI;
+    public GameObject cardTransform;
+    public bool backgroundBool;
     
+    
+    void Start()
+    {
+        CanvasUI= GameObject.Find("Canvas");
+        cardTransform = GameObject.Find("cardTransform");
+        blackbackground = GameObject.Find("backgroundAn");
+    }
     public void OnMouseEnter()
     {
         GameMgr.ID = id;
         isOver = true;
+        blackbackground.SetActive(true);
+        Vector3 objectpos = transform.localPosition;
+        transform.localPosition = new Vector3(objectpos.x,100f, objectpos.z);
     }
 
     public void OnMouseExit()
@@ -25,6 +38,9 @@ public class BigCard : MonoBehaviour
             GameMgr.ID = 0;
         }
         isOver = false;
+        blackbackground.SetActive(false);
+        Vector3 objectpos = transform.localPosition;
+        transform.localPosition = new Vector3(objectpos.x, 20, objectpos.z);
     }
     
     private void Update()
@@ -33,10 +49,10 @@ public class BigCard : MonoBehaviour
         //Debug.Log(GameMgr.ID);
         if (isOver)
         {
-            blackbackground.SetActive(true);
+            
             transform.localScale = new Vector3(1.22f,1.22f,1.22f);
-            Vector3 objectpos = transform.localPosition;
-            transform.localPosition = new Vector3(objectpos.x, -1f, objectpos.z);
+            //gameObject.transform.SetParent(CanvasUI.transform,true);
+            
             //Debug.Log(objectpos);
             transform.GetComponent<SpriteRenderer>().sortingOrder = 5;//設定layer
             //Debug.Log("滑鼠移到卡牌上");
@@ -45,12 +61,13 @@ public class BigCard : MonoBehaviour
         else
         {
             transform.localScale = new Vector3(0.61f,0.61f,0.61f);
+            //gameObject.transform.SetParent(cardTransform.transform);
             transform.GetComponent<SpriteRenderer>().sortingOrder = 3; //設定layer
-            Vector3 objectpos = transform.localPosition;
-            transform.localPosition = new Vector3(objectpos.x, -2.155206f, objectpos.z);
-            blackbackground.SetActive(false);
+            
         }
+
         
+
         blackbackground.SetActive(GameMgr.ID != 0);
     }
 

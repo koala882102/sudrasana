@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
-  blackbackground: {fileID: 1276260441857351260, guid: c0a19dfc401bc6d4abb04f3d5f757421, type: 3}
+  blackbackground: {fileID: 7764651675196144091, guid: d445e9fa83dac564f86b16fc63e59974, type: 3}
   c1: {fileID: 617750069941521394, guid: 8296e2da9f4e6e74facae1ea4e7c1b6f, type: 3}
   c2: {fileID: 3547351854607797187, guid: 6892661af2e800042b45205aa2e8728a, type: 3}
   c3: {fileID: 4518925199111750368}
@@ -103,6 +103,8 @@ MonoBehaviour:
   c7: {fileID: 4992372288952745929, guid: 2e931b73ff86f464ca4b109e5cee03fd, type: 3}
   c8: {fileID: 3078346463819103654, guid: e77b41dfb48792848ba84d4617a0ebaa, type: 3}
   DCard: {fileID: 3645479599410570652, guid: c317df64196125e42bef705138967d8a, type: 3}
+  CanvasUI: {fileID: 0}
+  cardTransform: {fileID: 0}
 --- !u!114 &-885783521195826950
 MonoBehaviour:
   m_ObjectHideFlags: 0

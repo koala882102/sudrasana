@@ -14,7 +14,7 @@ public class Settlement : MonoBehaviour
     public static int MyThisHealth;
 
     public GameObject RoundEndAn;
-    public GameObject EnemySpecialAn;
+    //public GameObject EnemySpecialAn;
     public GameObject GameOverAn;
     public GameObject MyDamageAn;
 
@@ -106,7 +106,7 @@ public class Settlement : MonoBehaviour
         if (MyRound == false)
         {
             RoundEndAn.SetActive(true);
-            Invoke("RoundEndAnend",1);
+            Invoke("RoundEndAnend",2);
             
             
             
@@ -134,8 +134,8 @@ public class Settlement : MonoBehaviour
             if (ECard.specialcarde == true)
             {
                 
-                EnemySpecialAn.SetActive(true);
-                Invoke("EspecialAn",3);
+                //EnemySpecialAn.SetActive(true);
+                //Invoke("EspecialAn",3);
                 
                 
             }
@@ -403,8 +403,8 @@ public class Settlement : MonoBehaviour
             if (ECard.specialcarde == true)
             {
                 
-                EnemySpecialAn.SetActive(true);
-                Invoke("EspecialAn",3);
+                //EnemySpecialAn.SetActive(true);
+                //Invoke("EspecialAn",3);
                 
                 
             }
@@ -418,6 +418,12 @@ public class Settlement : MonoBehaviour
         if (RoundTimes == 3)
         {
             if (GameMgr.MyHealth <= 0)
+            {
+                GameOverAn.SetActive(true);
+                Invoke("GameoverAn",2);
+                Invoke("EndGame",2);
+            }
+            if(GameMgr.EnemyHealth <= 0)
             {
                 GameOverAn.SetActive(true);
                 Invoke("GameoverAn",2);
@@ -437,7 +443,7 @@ public class Settlement : MonoBehaviour
 
     void EspecialAn()
     {
-        EnemySpecialAn.SetActive(false);
+        //EnemySpecialAn.SetActive(false);
     }
 
     void GameoverAn()

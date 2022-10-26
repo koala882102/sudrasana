@@ -22,6 +22,8 @@ public class ButtonCImg1 : MonoBehaviour
 
     public static int round;
 
+    public AudioMgr audiomgr;
+
     private void Start()
     {
         Defallsprit = transform.GetComponent<Image>().sprite;
@@ -31,6 +33,7 @@ public class ButtonCImg1 : MonoBehaviour
     {
         isOver = true;
         ischange = true;
+        audiomgr.change();
     }
 
     public void OnMouseExit()
